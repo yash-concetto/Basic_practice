@@ -6,6 +6,7 @@ import 'dart:io';
 }
 
 class Solution {
+
   bool isNumber(String s) {
     for(int i=0;i<s.length;i++) {
       if (s.codeUnitAt(i) >= "a".codeUnitAt(0) && s.codeUnitAt(i) <= "d".codeUnitAt(0)) {
