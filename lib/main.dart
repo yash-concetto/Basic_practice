@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:practic/flexible.dart';
+import 'package:practic/stack.dart';
+import ' excercise1.dart';
+import 'Expanded.dart';
+import 'testDemo/example.dart';
 
 /// Flutter code sample for [AppBar].
 
@@ -9,39 +14,14 @@ class AppBarApp extends StatelessWidget {
 
   @override
   Widget build( context) {
-    return const MaterialApp(
+    return  MaterialApp(
+      theme: ThemeData(colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.lightGreen)),
       debugShowCheckedModeBanner: false,
-      home: AppBarExample(),
+      // home: AppBarExample(),
+    // home: Stackexample(),
+    //   home: ExpandedApp(),
+      home: FlexibleExample(),
     );
   }
 }
 
-class AppBarExample extends StatelessWidget {
-  const AppBarExample({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-        title: const Center(child: Text('AppBar Demo')),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.search_rounded),
-            tooltip: 'Show Snackbar',
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('This is a snackbar')));
-            },
-          ),
-        ],
-      ),
-      body: const Center(
-        child: Text(
-          'This is the home page',
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
-    );
-  }
-}
