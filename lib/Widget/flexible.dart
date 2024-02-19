@@ -55,9 +55,9 @@ class FlexibleExample extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.yellow
-                    ), //BoxDecoration
+                    ),
                   ),
-                ), //Container
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -68,7 +68,7 @@ class FlexibleExample extends StatelessWidget {
                         height: 300,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.cyan,
+                          color: Colors.cyan, 
                         ),
                       ),
                     ),
